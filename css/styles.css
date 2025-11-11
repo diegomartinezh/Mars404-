@@ -7,7 +7,7 @@
   --color-accent: #00d9ff;
 
   /* Typography */
-  --font-main: "Space Mono", monospace;
+  --font-main: "Alan Sans", sans-serif;
   --font-size-huge: clamp(4rem, 15vw, 12rem);
 
   /* Spacing */
@@ -15,6 +15,10 @@
 
   /* Animation */
   --transition-normal: 0.3s ease;
+}
+
+body {
+  background-image: ;
 }
 
 /* Floating animation */
