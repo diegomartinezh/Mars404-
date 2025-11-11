@@ -12,6 +12,7 @@
       rel="stylesheet"
     />
     <script src="./js/script.js"></script>
+    <audio id="myaudio" src="../assets/audio/uuhhh_KD275SD.mp3"></audio>
   </head>
   <body>
     <main>
@@ -20,7 +21,12 @@
       </h1>
       <p class="subtitle vt323-regular color7">Lemons are to blame</p>
       <div class="btn-container">
-        <button class="vt323-regular btn" onclick="goBack()">
+        <button
+          onmousedown="document.getElementById('myaudio').play()"
+          class="vt323-regular btn"
+          id="myButton"
+          onclick="goBack()"
+        >
           YOU FAILED YOUR MISSION<svg
             class="skull-svg"
             xmlns="http://www.w3.org/2000/svg"

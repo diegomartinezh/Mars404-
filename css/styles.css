@@ -25,7 +25,7 @@
 }
 
 body {
-  background-image: url("../assets/images/Lemon_Mars.png");
+  background-image: url("../assets/images/Horizontal_Mars.png");
 }
 
 .main-title {
@@ -101,6 +101,15 @@ body {
 }
 .color7 {
   color: #ffd700;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: url("../assets/images/Vertical_Mars.png");
+  }
+  .btn-container {
+    margin-top: var(--space-lg);
+  }
 }
 
 /* Floating animation */
