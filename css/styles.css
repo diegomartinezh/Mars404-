@@ -16,7 +16,9 @@
   --font-size-small: 1rem;
 
   /* Spacing */
+  --space-sm: 1rem;
   --space-md: 2rem;
+  --space-lg: 7rem;
 
   /* Animation */
   --transition-normal: 0.3s ease;
@@ -31,7 +33,7 @@ body {
   font-size: var(--font-size-huge);
   color: var(--color-mars-light);
   text-align: center;
-  margin-top: var(--space-md);
+  margin-top: var(--space-lg);
   animation: float 3s ease-in-out infinite;
 }
 
@@ -93,6 +95,12 @@ body {
 }
 .color5 {
   color: #c09547;
+}
+.color6 {
+  color: white;
+}
+.color7 {
+  color: #ffd700;
 }
 
 /* Floating animation */
