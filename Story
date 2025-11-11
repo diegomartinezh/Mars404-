@@ -1,4 +1,0 @@
-Story: 
-Mars licked a lemon and shrank into itself, dissapearing.
-A pilot tries to access the primary martian spaceport database to know where to land.
-However, they are presented with a page that reads: 404 Mars not found.
