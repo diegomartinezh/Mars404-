@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404 – Lost in Citrus Space</title>
+
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+        font-family: "Inter", sans-serif;
+        color: #fdf8e3;
+        background: radial-gradient(circle at center, #f2d86f 0%, #8c550f 40%, #2b1a06 100%);
+        height: 100vh;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 4rem;
+        margin-top: 40px;
+        text-shadow: 0 0 12px #000;
+        animation: fadeIn 1.5s ease forwards;
+    }
+
+    p {
+        max-width: 640px;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        line-height: 1.7;
+        text-shadow: 0 0 10px #000;
+        animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Dynamic Starfield (no images) ===== */
+    .stars {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0; left: 0;
+        background: transparent;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .stars span {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: #fff;
+        border-radius: 50%;
+        animation: twinkle 3s infinite ease-in-out;
+        opacity: 0.8;
+    }
+
+    @keyframes twinkle {
+        0%,100% { opacity: 0.2; }
+        50% { opacity: 1; }
+    }
+
+    /* ===== Planet ===== */
+    .planet-wrapper {
+        position: absolute;
+        top: 52%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 360px;
+        animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+        50% { transform: translate(-50%, -50%) translateY(-22px); }
+    }
+
+    .planet {
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 30% 30%, #ffef9c, #f2d86f, #dfac26);
+        border-radius: 50%;
+        box-shadow: 0 0 50px rgba(0,0,0,0.4);
+        position: relative;
+        animation: spin 14s linear infinite;
+    }
+
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+
+    .crater {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(172,127,22,0.6), rgba(76,55,9,0.4));
+        box-shadow: inset 0 0 12px rgba(0,0,0,0.5);
+    }
+
+    .c1 { width: 55px; height: 55px; top: 80px; left: 50px; }
+    .c2 { width: 38px; height: 38px; top: 180px; left: 210px; }
+    .c3 { width: 26px; height: 26px; top: 230px; left: 130px; }
+    .c4 { width: 30px; height: 30px; top: 120px; left: 260px; }
+
+    /* Orbit ring */
+    .orbit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        border: 4px solid rgba(255,255,255,0.15);
+        transform: translate(-50%, -50%);
+        animation: orbitSpin 20s linear infinite;
+    }
+
+    @keyframes orbitSpin {
+        to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    /* ===== Spaceship (pure SVG, no image URL) ===== */
+    .ship {
+        width: 150px;
+        position: absolute;
+        top: 50%;
+        left: -200px;
+        animation: fly 12s linear infinite;
+        filter: drop-shadow(0 0 10px #fff);
+    }
+
+    @keyframes fly {
+        0% { transform: translateY(-40px) translateX(0) rotate(10deg); opacity: 0; }
+        20% { opacity: 1; }
+        50% { transform: translateY(-120px) translateX(80vw) rotate(-8deg); opacity: 1; }
+        90% { opacity: .8; }
+        100% { transform: translateY(-20px) translateX(120vw) rotate(15deg); opacity: 0; }
+    }
+
+    /* ===== Button ===== */
+    a {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 14px 32px;
+        background: #8c550f;
+        border-radius: 10px;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        border: 2px solid #3b2507;
+        box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        transition: 0.25s ease;
+        animation: fadeIn 2.8s ease forwards;
+    }
+
+    a:hover {
+        background: #6f410a;
+        transform: translateY(-3px);
+    }
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<h1>404: Trajectory Lost</h1>
+<p>
+Your spacecraft expected dusty red terrain…  
+but your destination has been **mysteriously replaced**  
+by a rotating citrus sphere with extremely familiar crater patterns.  
+<br><br>
+Your navigation computer refuses to land on fruit.
+</p>
+
+<!-- Spaceship (pure inline SVG) -->
+<svg class="ship" viewBox="0 0 300 150">
+    <ellipse cx="150" cy="75" rx="120" ry="45" fill="#e6e6e6" stroke="#000" stroke-width="4"/>
+    <circle cx="220" cy="75" r="25" fill="#ffffff" stroke="#000" stroke-width="4"/>
+    <ellipse cx="80" cy="75" rx="18" ry="22" fill="#ff4444" stroke="#000" stroke-width="4"/>
+</svg>
+
+<div class="planet-wrapper">
+    <div class="orbit"></div>
+    <div class="planet">
+        <div class="crater c1"></div>
+        <div class="crater c2"></div>
+        <div class="crater c3"></div>
+        <div class="crater c4"></div>
+    </div>
+</div>
+
+<a href="/">Return to Safety</a>
+
+<script>
+    /* Generate 200 random stars */
+    const starContainer = document.querySelector('.stars');
+    for (let i = 0; i < 200; i++) {
+        const star = document.createElement('span');
+        star.style.top = Math.random() * 100 + "%";
+        star.style.left = Math.random() * 100 + "%";
+        star.style.animationDelay = (Math.random() * 3) + "s";
+        starContainer.appendChild(star);
+    }
+</script>
+
+</body>
+</html>
